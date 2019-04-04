@@ -192,7 +192,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             jTableCustomerSaleDetail.getColumnModel().getColumn(1).setMaxWidth(100);
         }
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 120, 430, 210));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, 410, 210));
 
         jLabelAddMoney.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelAddMoney.setForeground(new java.awt.Color(255, 255, 255));
@@ -293,14 +293,14 @@ public class CustomerDetails extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Sale Id ", "Sale Date", "Total Amount", "Paid", "Remaining"
+                "Sale Id ", "Sale Date", "Discount", "Total Amount", "Paid", "Remaining"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -324,16 +324,18 @@ public class CustomerDetails extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(jTableCustomerSale);
         if (jTableCustomerSale.getColumnModel().getColumnCount() > 0) {
-            jTableCustomerSale.getColumnModel().getColumn(0).setMinWidth(90);
-            jTableCustomerSale.getColumnModel().getColumn(0).setPreferredWidth(90);
-            jTableCustomerSale.getColumnModel().getColumn(0).setMaxWidth(90);
-            jTableCustomerSale.getColumnModel().getColumn(1).setPreferredWidth(110);
-            jTableCustomerSale.getColumnModel().getColumn(2).setPreferredWidth(5);
-            jTableCustomerSale.getColumnModel().getColumn(3).setPreferredWidth(20);
+            jTableCustomerSale.getColumnModel().getColumn(0).setMinWidth(60);
+            jTableCustomerSale.getColumnModel().getColumn(0).setPreferredWidth(60);
+            jTableCustomerSale.getColumnModel().getColumn(0).setMaxWidth(60);
+            jTableCustomerSale.getColumnModel().getColumn(1).setMinWidth(90);
+            jTableCustomerSale.getColumnModel().getColumn(1).setPreferredWidth(90);
+            jTableCustomerSale.getColumnModel().getColumn(1).setMaxWidth(90);
+            jTableCustomerSale.getColumnModel().getColumn(3).setPreferredWidth(5);
             jTableCustomerSale.getColumnModel().getColumn(4).setPreferredWidth(20);
+            jTableCustomerSale.getColumnModel().getColumn(5).setPreferredWidth(20);
         }
 
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 570, 210));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 610, 210));
 
         jTableCustomerProductSale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTableCustomerProductSale.setForeground(new java.awt.Color(0, 0, 51));
@@ -342,14 +344,14 @@ public class CustomerDetails extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Product Sale Id ", "Sale Date", "Total Amount", "Paid", "Remaining"
+                "Product Sale Id ", "Sale Date", "Discount", "Total Amount", "Paid", "Remaining"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -376,13 +378,18 @@ public class CustomerDetails extends javax.swing.JFrame {
             jTableCustomerProductSale.getColumnModel().getColumn(0).setMinWidth(90);
             jTableCustomerProductSale.getColumnModel().getColumn(0).setPreferredWidth(90);
             jTableCustomerProductSale.getColumnModel().getColumn(0).setMaxWidth(90);
-            jTableCustomerProductSale.getColumnModel().getColumn(1).setPreferredWidth(110);
-            jTableCustomerProductSale.getColumnModel().getColumn(2).setPreferredWidth(5);
-            jTableCustomerProductSale.getColumnModel().getColumn(3).setPreferredWidth(20);
+            jTableCustomerProductSale.getColumnModel().getColumn(1).setMinWidth(100);
+            jTableCustomerProductSale.getColumnModel().getColumn(1).setPreferredWidth(100);
+            jTableCustomerProductSale.getColumnModel().getColumn(1).setMaxWidth(100);
+            jTableCustomerProductSale.getColumnModel().getColumn(2).setMinWidth(90);
+            jTableCustomerProductSale.getColumnModel().getColumn(2).setPreferredWidth(90);
+            jTableCustomerProductSale.getColumnModel().getColumn(2).setMaxWidth(90);
+            jTableCustomerProductSale.getColumnModel().getColumn(3).setPreferredWidth(5);
             jTableCustomerProductSale.getColumnModel().getColumn(4).setPreferredWidth(20);
+            jTableCustomerProductSale.getColumnModel().getColumn(5).setPreferredWidth(20);
         }
 
-        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 570, 210));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 620, 210));
 
         jTableCustomerProductSaleDetail1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTableCustomerProductSaleDetail1.setForeground(new java.awt.Color(0, 0, 51));
@@ -427,7 +434,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             jTableCustomerProductSaleDetail1.getColumnModel().getColumn(2).setMaxWidth(40);
         }
 
-        jPanel1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, 430, 210));
+        jPanel1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 400, 400, 210));
 
         jRadioWithDraw.setBackground(new java.awt.Color(60, 34, 19));
         buttonGroup2.add(jRadioWithDraw);
@@ -709,6 +716,8 @@ public class CustomerDetails extends javax.swing.JFrame {
             Vector V = new Vector();
             V.add(salesDetails.getSale_id());
             V.add(salesDetails.getSale_date());
+            V.add(salesDetails.getDiscount() + " " + salesDetails.getDiscount());
+
             V.add(salesDetails.getTotal_bill());
             V.add(salesDetails.getPaid());
             V.add(salesDetails.getTotal_bill() - salesDetails.getPaid());
@@ -724,6 +733,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             Vector V = new Vector();
             V.add(psb.getProdSaleId());
             V.add(psb.getCreatedAt());
+            V.add(psb.getDiscount() + " " + psb.getDiscount());
             V.add(psb.getTotalCost());
             V.add(psb.getPaid());
             V.add(psb.getTotalCost() - psb.getPaid());

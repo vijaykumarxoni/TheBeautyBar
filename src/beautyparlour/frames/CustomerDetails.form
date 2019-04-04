@@ -61,7 +61,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="860" y="120" width="430" height="210"/>
+              <AbsoluteConstraints x="900" y="120" width="410" height="210"/>
             </Constraint>
           </Constraints>
 
@@ -317,7 +317,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="280" y="120" width="570" height="210"/>
+              <AbsoluteConstraints x="280" y="120" width="610" height="210"/>
             </Constraint>
           </Constraints>
 
@@ -332,9 +332,10 @@
                   <Color blue="33" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="0">
+                  <Table columnCount="6" rowCount="0">
                     <Column editable="false" title="Sale Id " type="java.lang.String"/>
                     <Column editable="false" title="Sale Date" type="java.lang.String"/>
+                    <Column editable="false" title="Discount" type="java.lang.Object"/>
                     <Column editable="false" title="Total Amount" type="java.lang.String"/>
                     <Column editable="false" title="Paid" type="java.lang.String"/>
                     <Column editable="false" title="Remaining" type="java.lang.Object"/>
@@ -343,12 +344,17 @@
                 <Property name="toolTipText" type="java.lang.String" value="Customer Record"/>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="60" minWidth="60" prefWidth="60" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="90" minWidth="90" prefWidth="90" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="110" resizable="true">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>
@@ -393,7 +399,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="280" y="400" width="570" height="210"/>
+              <AbsoluteConstraints x="280" y="400" width="620" height="210"/>
             </Constraint>
           </Constraints>
 
@@ -408,9 +414,10 @@
                   <Color blue="33" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="0">
+                  <Table columnCount="6" rowCount="0">
                     <Column editable="false" title="Product Sale Id " type="java.lang.String"/>
                     <Column editable="false" title="Sale Date" type="java.lang.String"/>
+                    <Column editable="false" title="Discount" type="java.lang.Object"/>
                     <Column editable="false" title="Total Amount" type="java.lang.String"/>
                     <Column editable="false" title="Paid" type="java.lang.String"/>
                     <Column editable="false" title="Remaining" type="java.lang.Object"/>
@@ -424,7 +431,12 @@
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="110" resizable="true">
+                    <Column maxWidth="100" minWidth="100" prefWidth="100" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="90" minWidth="90" prefWidth="90" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>
@@ -469,7 +481,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="860" y="400" width="430" height="210"/>
+              <AbsoluteConstraints x="910" y="400" width="400" height="210"/>
             </Constraint>
           </Constraints>
 

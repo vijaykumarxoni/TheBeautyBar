@@ -98,6 +98,8 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
     ServiceDao serviceDao;
     InventoryDao inventoryDao;
     boolean printer = false;
+    SalePage salePage;
+    RetailPage retailPage;
 //    public ArrayList<DebtDetailBeans> debt_details_list;
 
     /**
@@ -125,10 +127,9 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
     }
     String reference = "";
 
-    public CashNowLaterDialog(java.awt.Frame parent, boolean modal, PaymentDoneBeans ob) {
+    public CashNowLaterDialog(java.awt.Frame parent, boolean modal, PaymentDoneBeans ob, SalePage salePage) {
         super(parent, modal);
         initComponents();
-
         cashGot = true;
         this.ob = ob;
 //        this.reference=reference;
@@ -142,13 +143,15 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
 //        debtDao = new DebtDaoImpl();
         customerDao = new CustomerDaoImpl();
         payLaterField.setEnabled(false);
+        this.salePage = salePage;
     }
 
-    public CashNowLaterDialog(java.awt.Frame parent, boolean modal, ProductPaymentDoneBean obProd, boolean isProductRetail) {
+    public CashNowLaterDialog(java.awt.Frame parent, boolean modal, ProductPaymentDoneBean obProd, boolean isProductRetail, RetailPage retailPage) {
         super(parent, modal);
         initComponents();
         this.isProductRetail = isProductRetail;
         cashGot = true;
+        this.retailPage = retailPage;
         this.obProd = obProd;
 //        this.reference=reference;
         pricetoPayField.setText("Total Price To Pay:  " + obProd.getTotal_price());
@@ -220,12 +223,14 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
         payLaterField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         payLaterField.setForeground(new java.awt.Color(255, 255, 255));
         payLaterField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        payLaterField.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(payLaterField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 200, 20));
 
         payNowField.setBackground(new java.awt.Color(20, 11, 6));
         payNowField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         payNowField.setForeground(new java.awt.Color(255, 255, 255));
         payNowField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        payNowField.setCaretColor(new java.awt.Color(255, 255, 255));
         payNowField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 payNowFieldKeyReleased(evt);
@@ -378,12 +383,9 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
                         Logger.getLogger(CashNowLaterDialog.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-                this.dispose();
 
-                java.awt.Window win[] = java.awt.Window.getWindows();
-                for (int j = 0; i < win.length; i++) {
-                    win[j].dispose();
-                }
+                this.dispose();
+                retailPage.dispose();
 
                 new RetailPage().setVisible(true);
 
@@ -457,12 +459,7 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
 //                System.out.println("" + e.getMessage());
 //            }
                 this.dispose();
-
-                java.awt.Window win[] = java.awt.Window.getWindows();
-                for (int j = 0; i < win.length; i++) {
-                    win[j].dispose();
-                }
-
+                salePage.dispose();
                 new SalePage().setVisible(true);
 
             }
@@ -785,12 +782,7 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
                 }
 
                 this.dispose();
-
-                java.awt.Window win[] = java.awt.Window.getWindows();
-                for (int j = 0; i < win.length; i++) {
-                    win[j].dispose();
-                }
-
+                retailPage.dispose();
                 new RetailPage().setVisible(true);
 
             } else {
@@ -868,12 +860,7 @@ public class CashNowLaterDialog extends javax.swing.JDialog {
                     System.out.println("" + e.getMessage());
                 }
                 this.dispose();
-
-                java.awt.Window win[] = java.awt.Window.getWindows();
-                for (int j = 0; i < win.length; i++) {
-                    win[j].dispose();
-                }
-
+                salePage.dispose();
                 new SalePage().setVisible(true);
 
             }

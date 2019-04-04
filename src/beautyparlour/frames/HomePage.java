@@ -7,6 +7,7 @@ package beautyparlour.frames;
 
 import beautyparlour.dialog.PrintersAvailable;
 import java.awt.Toolkit;
+import java.awt.Window;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.Icon;
@@ -24,6 +25,9 @@ public class HomePage extends javax.swing.JFrame {
      */
     public HomePage() {
         initComponents();
+        
+
+  
 //        
 //        Toolkit toolkit=Toolkit.getDefaultToolkit();
 //        int xsize=(int)toolkit.getScreenSize().getWidth();
@@ -32,6 +36,8 @@ public class HomePage extends javax.swing.JFrame {
 //                this.setSize(xsize,ysize);
 
 //        new PrintersAvailable(this, true).setVisible(true);
+
+
         closePage();
     }
 

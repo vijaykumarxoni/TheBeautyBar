@@ -175,14 +175,10 @@ public class SalePage extends javax.swing.JFrame {
         numberField = new javax.swing.JTextField();
         addressfield = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        itemField = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        addField = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         totalField = new javax.swing.JTextField();
         generateButton = new javax.swing.JButton();
@@ -196,6 +192,10 @@ public class SalePage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         searchField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        itemField = new javax.swing.JLabel();
+        addField = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sale");
@@ -283,11 +283,6 @@ public class SalePage extends javax.swing.JFrame {
         jLabel3.setText("Contact:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 111, -1, -1));
 
-        itemField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        itemField.setForeground(new java.awt.Color(255, 255, 255));
-        itemField.setText("Service: ------");
-        getContentPane().add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(603, 362, -1, -1));
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address:");
@@ -321,43 +316,6 @@ public class SalePage extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 272, 570, 226));
-
-        addField.setBackground(new java.awt.Color(60, 34, 19));
-        addField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        addField.setForeground(new java.awt.Color(255, 255, 255));
-        addField.setText("Add");
-        addField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(addField, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 390, 112, -1));
-
-        jTable2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Service Name", "Cost"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable2MouseReleased(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTable2);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 510, 226));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -410,13 +368,14 @@ public class SalePage extends javax.swing.JFrame {
         removeService.setBackground(new java.awt.Color(60, 34, 19));
         removeService.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         removeService.setForeground(new java.awt.Color(255, 255, 255));
+        removeService.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/delete.png"))); // NOI18N
         removeService.setText("Remove");
         removeService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeServiceActionPerformed(evt);
             }
         });
-        getContentPane().add(removeService, new org.netbeans.lib.awtextra.AbsoluteConstraints(1115, 524, 112, -1));
+        getContentPane().add(removeService, new org.netbeans.lib.awtextra.AbsoluteConstraints(1097, 524, 130, -1));
 
         jLabel11.setBackground(new java.awt.Color(60, 34, 19));
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -466,6 +425,48 @@ public class SalePage extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Search");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 20));
+
+        jTable2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Service Name", "Cost"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable2MouseReleased(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 540, 226));
+
+        itemField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        itemField.setForeground(new java.awt.Color(255, 255, 255));
+        itemField.setText("Service: ------");
+        jPanel1.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 180, 100));
+
+        addField.setBackground(new java.awt.Color(60, 34, 19));
+        addField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addField.setForeground(new java.awt.Color(255, 255, 255));
+        addField.setText("Add");
+        addField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 112, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 680));
 
@@ -648,7 +649,7 @@ public class SalePage extends javax.swing.JFrame {
         new CashNowLaterDialog(this, true, new PaymentDoneBeans(date + "", discount,
                 discount_type,
                 total_priceGot, customer_id, selected_services_List,
-                sale_customer)).setVisible(true);
+                sale_customer),this).setVisible(true);
 
     }//GEN-LAST:event_generateButtonActionPerformed
 

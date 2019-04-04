@@ -6,6 +6,7 @@
 package beautyparlour.bean;
 
 import beautyparlour.bean.ServiceBeans;
+import beautyparlour.frames.SalePage;
 import java.util.ArrayList;
 
 /**
@@ -29,6 +30,10 @@ Boolean sale_customer;
         this.customer_id = customer_id;
         this.selected_service_list = selected_service_list;
         this.sale_customer = sale_customer;
+    }
+
+    public PaymentDoneBeans(String string, float discount, String discount_type, Double total_priceGot, int customer_id, ArrayList<ServiceBeans> selected_services_List, boolean sale_customer, SalePage aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

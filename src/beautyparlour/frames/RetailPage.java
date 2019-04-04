@@ -424,17 +424,17 @@ public class RetailPage extends javax.swing.JFrame {
         itemField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         itemField.setForeground(new java.awt.Color(255, 255, 255));
         itemField.setText("Service: ------");
-        jPanel1.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 360, -1, -1));
+        jPanel1.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 160, 70));
 
         jSpinnerQuantity.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jSpinnerQuantity.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         jSpinnerQuantity.setValue(1);
-        jPanel1.add(jSpinnerQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 320, 80, -1));
+        jPanel1.add(jSpinnerQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 80, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("QTY");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 40, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 360, 40, -1));
 
         jComboBoxDiscountType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxDiscountType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amount", "Percentage" }));
@@ -724,7 +724,7 @@ public class RetailPage extends javax.swing.JFrame {
         new CashNowLaterDialog(this, true, new ProductPaymentDoneBean(date + "", discount,
                 discount_type,
                 total_priceGot, customer_id, selInventories,
-                sale_customer), true).setVisible(true);
+                sale_customer), true,this).setVisible(true);
 
 //        new CashNowLaterDialog(this, true).setVisible(true);
 
