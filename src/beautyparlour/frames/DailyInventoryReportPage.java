@@ -75,6 +75,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         productSaleDetailDao = new ProductSaleDetailDaoImpl();
         productSaleDetails = new ArrayList<>();
         showInTable(date + "");
+        this.date2=""+date;
         dateLabel.setText("Today's Report");
 
     }
@@ -338,7 +339,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jXDatePicker2ActionPerformed
 
     private void jButtonBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBack1ActionPerformed
-        MessageFormat header = new MessageFormat("THE BEAUTY BAR Inventory Report of " + date2);
+        MessageFormat header = new MessageFormat("THE BEAUTY BAR Inventory Sale Report of "+date2 );
         MessageFormat footer = new MessageFormat("Page{0,number,integer}");
         try {
             this.jTableDetails.print(JTable.PrintMode.FIT_WIDTH, header, footer);
