@@ -91,6 +91,7 @@ public class ProductSaleDetailDaoImpl implements ProductSaleDetailDao {
         try {
             String query = "SELECT * FROM product_sale_details WHERE active=1 and prod_sale_id=" + prodSaleId;
             Statement ps = con.createStatement();
+            CustomerDao customerDao = new CustomerDaoImpl();
 
             ResultSet rs = ps.executeQuery(query);
             while (rs.next()) {
@@ -101,6 +102,8 @@ public class ProductSaleDetailDaoImpl implements ProductSaleDetailDao {
                 InventoryDao inventoryDao = new InventoryDaoImpl();
                 psdb.setInventoryBean(inventoryDao.getInventoryById(rs.getInt("inventory_id")));
                 psdb.setCost(rs.getDouble("cost"));
+                psdb.setCustomerBean(customerDao.getCustomerById(rs.getInt("customer_id")));
+
                 psdb.setTotalCost(rs.getDouble("total_cost"));
                 psdb.setQuantity(rs.getInt("quantity"));
                 psdb.setCreatedAt(rs.getString("created_at"));
@@ -136,6 +139,39 @@ public class ProductSaleDetailDaoImpl implements ProductSaleDetailDao {
             e.printStackTrace();
         }
         return i;
+    }
+
+    @Override
+    public ArrayList<ProductSaleDetailBean> getAllProductSaleDetailsByInventoryId(int id, String date) {
+
+        ArrayList<ProductSaleDetailBean> productSaleDetails = new ArrayList<>();
+        try {
+            String query = "SELECT * FROM product_sale_details WHERE active=1  and created_at=\"" + date + "\" and  inventory_id=" + id;
+            Statement ps = con.createStatement();
+            CustomerDao customerDao = new CustomerDaoImpl();
+            ResultSet rs = ps.executeQuery(query);
+            while (rs.next()) {
+                ProductSaleDetailBean psdb = new ProductSaleDetailBean();
+                psdb.setProdSaleDetailId(rs.getInt("prod_sale_detail_id"));
+                ProductSaleDao productSaleDao = new ProductSaleDaoImpl();
+                psdb.setProductSaleBean(productSaleDao.getProductSaleById(rs.getInt("prod_sale_id")));
+                InventoryDao inventoryDao = new InventoryDaoImpl();
+                psdb.setInventoryBean(inventoryDao.getInventoryById(rs.getInt("inventory_id")));
+                psdb.setCost(rs.getDouble("cost"));
+                psdb.setCustomerBean(customerDao.getCustomerById(rs.getInt("customer_id")));
+                psdb.setTotalCost(rs.getDouble("total_cost"));
+                psdb.setQuantity(rs.getInt("quantity"));
+                psdb.setCreatedAt(rs.getString("created_at"));
+                psdb.setActive(rs.getInt("active"));
+                productSaleDetails.add(psdb);
+
+            }
+        } catch (Exception e) {
+            System.out.println("Error in getAllProductSaleDetailsBySaleId");
+            e.printStackTrace();
+        }
+
+        return productSaleDetails;
     }
 
 }

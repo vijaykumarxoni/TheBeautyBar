@@ -592,6 +592,8 @@ public class SalePage extends javax.swing.JFrame {
 
         showInBuy(s);
         generateButton.setEnabled(true);
+        addField.setEnabled(false);
+        
 
 
     }//GEN-LAST:event_addFieldActionPerformed

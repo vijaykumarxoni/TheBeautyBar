@@ -414,6 +414,7 @@ public class CustomerForm extends javax.swing.JFrame {
 
     private void jTextFieldSerachKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSerachKeyReleased
         // TODO add your handling code here:
+                this.jTableCustomer.getSelectionModel().clearSelection();
 
         try {
 

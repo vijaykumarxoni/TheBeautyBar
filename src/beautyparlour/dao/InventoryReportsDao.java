@@ -13,6 +13,9 @@ import java.util.List;
  * @author Vksoni
  */
 public interface InventoryReportsDao {
-        public List<DailyInventoryReport> getTodaysSoldQtyOFInventories(String date);
+
+    public List<DailyInventoryReport> getTodaysSoldQtyOFInventories(String date);
+
+    public List<DailyInventoryReport> getSoldQtyOFInventories();
 
 }

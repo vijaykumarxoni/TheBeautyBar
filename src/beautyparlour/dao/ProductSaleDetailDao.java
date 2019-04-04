@@ -21,6 +21,8 @@ public interface ProductSaleDetailDao {
 
     public ArrayList<ProductSaleDetailBean> getAllProductSaleDetailsBySaleId(int prodSaleId);
 
+    public ArrayList<ProductSaleDetailBean> getAllProductSaleDetailsByInventoryId(int id, String date);
+
     public int modifyProductSaleDetails(ProductSaleDetailBean psdb);
 
     public int deleteProductSaleDetails(int prodSaleId);

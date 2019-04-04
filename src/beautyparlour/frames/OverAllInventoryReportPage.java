@@ -47,7 +47,7 @@ import org.eclipse.birt.report.engine.api.IRunAndRenderTask;
  *
  * @author Dell
  */
-public class DailyInventoryReportPage extends javax.swing.JFrame {
+public class OverAllInventoryReportPage extends javax.swing.JFrame {
 
     /**
      * Creates new form DailyReportPage
@@ -61,7 +61,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
     ProductSaleDetailDao productSaleDetailDao;
     TableRowSorter<DefaultTableModel> rowSorter = null;
 
-    public DailyInventoryReportPage() {
+    public OverAllInventoryReportPage() {
         initComponents();
         this.getContentPane().setBackground(Color.white);
 
@@ -75,7 +75,6 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         productSaleDetailDao = new ProductSaleDetailDaoImpl();
         productSaleDetails = new ArrayList<>();
         showInTable(date + "");
-        dateLabel.setText("Today's Report");
 
     }
 
@@ -83,7 +82,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         tableModelReport.setRowCount(0);
 
         int serial = 0;
-        dailyInventoryReports = inventoryReportsDao.getTodaysSoldQtyOFInventories(date);
+        dailyInventoryReports = inventoryReportsDao.getSoldQtyOFInventories();
 
         for (DailyInventoryReport dir : dailyInventoryReports) {
             Vector V = new Vector();
@@ -133,20 +132,17 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        dateLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jXDatePicker2 = new org.jdesktop.swingx.JXDatePicker();
         jButtonBack1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableDetails = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableReport = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        jTextFieldSerach3 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jTextFieldSerach3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -162,11 +158,6 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 100, 30));
 
-        dateLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        dateLabel.setForeground(new java.awt.Color(255, 255, 255));
-        dateLabel.setText("Date:");
-        getContentPane().add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 186, -1, -1));
-
         jPanel1.setBackground(new java.awt.Color(20, 11, 6));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -181,20 +172,8 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Daily InventoryReport");
+        jLabel1.setText("Overall InventoryReport");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Pick a date:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
-
-        jXDatePicker2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jXDatePicker2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jXDatePicker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
 
         jButtonBack1.setBackground(new java.awt.Color(60, 34, 19));
         jButtonBack1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -236,7 +215,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
             jTableDetails.getColumnModel().getColumn(3).setMaxWidth(110);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 660, 420));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 660, 460));
 
         jTableReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTableReport.setModel(new javax.swing.table.DefaultTableModel(
@@ -273,10 +252,15 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
             jTableReport.getColumnModel().getColumn(3).setMaxWidth(110);
         }
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 630, 420));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 630, 460));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Search");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 110, 70, 30));
 
         jTextFieldSerach3.setBackground(new java.awt.Color(20, 11, 6));
         jTextFieldSerach3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -294,12 +278,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
                 jTextFieldSerach3KeyReleased(evt);
             }
         });
-        jPanel1.add(jTextFieldSerach3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 170, 230, 30));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Search");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 170, 70, 30));
+        jPanel1.add(jTextFieldSerach3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 110, 230, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 670));
 
@@ -312,30 +291,6 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         new ReportPage().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jXDatePicker2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jXDatePicker2ActionPerformed
-        // TODO add your handling code here:
-
-//        String date=jXDatePicker2.getDate().toString();
-//        System.out.println(""+date);
-        tableModelDetail.setRowCount(0);
-
-        Calendar cals = Calendar.getInstance();
-        SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
-        date2 = formater.format(jXDatePicker2.getDate());
-        System.out.println("" + date2);
-        showInTable(date2);
-        LocalDate date = LocalDate.now();
-
-        if (date2.equals(date + "")) {
-            dateLabel.setText("Today's Report");
-        } else {
-            dateLabel.setText("Report of Date: " + date2);
-
-        }
-
-
-    }//GEN-LAST:event_jXDatePicker2ActionPerformed
 
     private void jButtonBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBack1ActionPerformed
         MessageFormat header = new MessageFormat("THE BEAUTY BAR Inventory Report of " + date2);
@@ -359,7 +314,8 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
 
     private void jTextFieldSerach3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSerach3KeyReleased
         // TODO add your handling code here:
-        tableModelDetail.setRowCount(0); 
+
+        tableModelDetail.setRowCount(0);
         this.jTableReport.getSelectionModel().clearSelection();
         this.jTableDetails.getSelectionModel().clearSelection();
 
@@ -391,32 +347,32 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DailyInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OverAllInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DailyInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OverAllInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DailyInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OverAllInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DailyInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OverAllInventoryReportPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DailyInventoryReportPage().setVisible(true);
+                new OverAllInventoryReportPage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel dateLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBack1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
@@ -425,6 +381,5 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
     private javax.swing.JTable jTableDetails;
     private javax.swing.JTable jTableReport;
     private javax.swing.JTextField jTextFieldSerach3;
-    private org.jdesktop.swingx.JXDatePicker jXDatePicker2;
     // End of variables declaration//GEN-END:variables
 }

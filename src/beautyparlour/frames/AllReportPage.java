@@ -45,31 +45,27 @@ public class AllReportPage extends javax.swing.JFrame {
 
     public AllReportPage() {
         initComponents();
-                this.getContentPane().setBackground(Color.white);
+        this.getContentPane().setBackground(Color.white);
 
         reportDao = new ReportDaoImpl();
         tableModelReport = (DefaultTableModel) this.jTableReport.getModel();
         rowSorter = new TableRowSorter<DefaultTableModel>(tableModelReport);
-        JTableHeader header = this.jTableReport.getTableHeader();
-        header.setBackground(new Color(102, 204, 255));
-        header.setForeground(new Color(255, 255, 255));
-        header.setFont(new Font("SansSerif", Font.BOLD, 14));
         this.jTableReport.setRowSorter(rowSorter);
         LocalDate date = LocalDate.now();
-        
-        showInTable(date+"");
+
+        showInTable(date + "");
 //        dateLabel.setText("Today's Report");
 
     }
 
     public void showInTable(String date) {
-        int total_profit=0;
-        int total_customers=0;
+        int total_profit = 0;
+        int total_customers = 0;
         tableModelReport.setRowCount(0);
 
         int serial = 0;
         daily_report_list = reportDao.getAllReportBean();
-       
+
         for (DailyReportBean dailyReportBean : daily_report_list) {
             Vector V = new Vector();
             serial++;
@@ -78,14 +74,14 @@ public class AllReportPage extends javax.swing.JFrame {
             V.add(dailyReportBean.getCustomer_name());
             V.add(dailyReportBean.getSale_date());
             V.add(dailyReportBean.getTotal_bill());
-      
-            total_profit+= dailyReportBean.getTotal_bill();
-            total_customers+=1;
+
+            total_profit += dailyReportBean.getTotal_bill();
+            total_customers += 1;
             tableModelReport.addRow(V);
         }
-        
-        totatCustomerlabel.setText(""+total_customers);
-        totatProfitlabel.setText(""+total_profit);
+
+        totatCustomerlabel.setText("" + total_customers);
+        totatProfitlabel.setText("" + total_profit);
     }
 
     /**
@@ -246,10 +242,11 @@ public class AllReportPage extends javax.swing.JFrame {
         } finally {
             Platform.shutdown();
         }
-   }
-    
-    
-    /**s
+    }
+
+    /**
+     * s
+     *
      * @param args the command line arguments
      */
     public static void main(String args[]) {
