@@ -54,6 +54,8 @@ public class ReportPage extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,7 +63,6 @@ public class ReportPage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton5.setBackground(new java.awt.Color(60, 34, 19));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Back");
         jButton5.setFocusPainted(false);
@@ -204,6 +205,28 @@ public class ReportPage extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, -1, -1));
 
+        jButton10.setBackground(new java.awt.Color(60, 34, 19));
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
+        jButton10.setText("Daily Expenses");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 250, 50));
+
+        jButton11.setBackground(new java.awt.Color(60, 34, 19));
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setText("Monthly Expenses Report");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 250, 50));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 540));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -272,6 +295,17 @@ public class ReportPage extends javax.swing.JFrame {
         new OverAllInventoryReportPage().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:\
+        new DailyExpensesReportPage().setVisible(true);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new MonthlyExpensesReportPage().setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,6 +385,8 @@ public class ReportPage extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

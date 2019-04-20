@@ -51,7 +51,7 @@ public class ServiceDaoImpl implements ServiceDao {
           
         ArrayList<ServiceBeans> service_list = new ArrayList<>();
         try {
-            String query = "SELECT * FROM services WHERE service_active=1";
+            String query = "SELECT * FROM services WHERE service_active=1  order by service_id desc";
             Statement ps = con.createStatement();
 
             ResultSet rs = ps.executeQuery(query);

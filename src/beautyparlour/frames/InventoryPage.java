@@ -83,7 +83,6 @@ public class InventoryPage extends javax.swing.JFrame {
             V.add(ib.getActualCost());
             V.add(ib.getSellingCost());
             V.add(ib.getQuantity());
-            V.add(ib.getCreateAt());
 
 //            V.add(customer.getCreation_date());
             tableModelService.addRow(V);
@@ -121,9 +120,9 @@ public class InventoryPage extends javax.swing.JFrame {
         jTextFieldSellingCost = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jSpinnerQuantity = new javax.swing.JSpinner();
         jTextFieldProductName = new javax.swing.JTextField();
         jButtonBack1 = new javax.swing.JButton();
+        jTextFieldQty = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -133,7 +132,6 @@ public class InventoryPage extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonBack.setBackground(new java.awt.Color(60, 34, 19));
-        jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonBack.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBack.setText("Back");
         jButtonBack.setFocusPainted(false);
@@ -219,20 +217,20 @@ public class InventoryPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 220, 40));
 
-        jTableInventory.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableInventory.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableInventory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Sr #", "Id", "Name", "Actual Cost", "Selling Cost", "Quantity", "Creation Date"
+                "Sr #", "Id", "Name", "Actual Cost", "Selling Cost", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -264,6 +262,12 @@ public class InventoryPage extends javax.swing.JFrame {
             jTableInventory.getColumnModel().getColumn(1).setMinWidth(80);
             jTableInventory.getColumnModel().getColumn(1).setPreferredWidth(80);
             jTableInventory.getColumnModel().getColumn(1).setMaxWidth(80);
+            jTableInventory.getColumnModel().getColumn(3).setMinWidth(150);
+            jTableInventory.getColumnModel().getColumn(3).setPreferredWidth(150);
+            jTableInventory.getColumnModel().getColumn(3).setMaxWidth(150);
+            jTableInventory.getColumnModel().getColumn(4).setMinWidth(120);
+            jTableInventory.getColumnModel().getColumn(4).setPreferredWidth(120);
+            jTableInventory.getColumnModel().getColumn(4).setMaxWidth(120);
             jTableInventory.getColumnModel().getColumn(5).setMinWidth(80);
             jTableInventory.getColumnModel().getColumn(5).setPreferredWidth(80);
             jTableInventory.getColumnModel().getColumn(5).setMaxWidth(80);
@@ -330,6 +334,11 @@ public class InventoryPage extends javax.swing.JFrame {
         jTextFieldSellingCost.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jTextFieldSellingCost.setCaretColor(new java.awt.Color(255, 255, 255));
         jTextFieldSellingCost.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        jTextFieldSellingCost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSellingCostActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextFieldSellingCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 350, 30));
 
         jLabel8.setBackground(new java.awt.Color(20, 11, 6));
@@ -342,10 +351,6 @@ public class InventoryPage extends javax.swing.JFrame {
         jLabel9.setForeground(java.awt.Color.white);
         jLabel9.setText("Quantity*");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 206, -1));
-
-        jSpinnerQuantity.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        jSpinnerQuantity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel1.add(jSpinnerQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 350, 20));
 
         jTextFieldProductName.setBackground(new java.awt.Color(20, 11, 6));
         jTextFieldProductName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -372,6 +377,14 @@ public class InventoryPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 220, 40));
+
+        jTextFieldQty.setBackground(new java.awt.Color(20, 11, 6));
+        jTextFieldQty.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldQty.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldQty.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jTextFieldQty.setCaretColor(new java.awt.Color(255, 255, 255));
+        jTextFieldQty.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jTextFieldQty, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 350, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 640));
 
@@ -467,17 +480,25 @@ public class InventoryPage extends javax.swing.JFrame {
         }
         String pname = ib.getInventoryName();
         int indexStart = pname.lastIndexOf("(");
-        String name = pname.substring(0, indexStart - 1);
-        String uom = pname.substring(indexStart + 1, pname.length() - 1);
-        String weight = uom.split(" ")[0];
-        String unit = uom.split(" ")[1];
+        if (!(indexStart < 0)) {
+            String name = pname.substring(0, indexStart - 1);
+            String uom = pname.substring(indexStart + 1, pname.length() - 1);
+            String weight = uom.split(" ")[0];
+            String unit = uom.split(" ")[1];
 
-        this.jTextFieldProductName.setText(name);
-        this.jTextFieldProductUom.setText(weight);
-        this.jComboBoxUnit.setSelectedItem(unit);
+            this.jTextFieldProductName.setText(name);
+            this.jTextFieldProductUom.setText(weight);
+            this.jComboBoxUnit.setSelectedItem(unit);
+        } else {
+            this.jTextFieldProductName.setText(pname);
+            this.jTextFieldProductUom.setText("");
+            this.jComboBoxUnit.setSelectedItem("");
+
+        }
+
         this.jTextFieldActualCost.setText("" + ib.getActualCost());
         this.jTextFieldSellingCost.setText("" + ib.getSellingCost());
-        this.jSpinnerQuantity.setValue(ib.getQuantity());
+        this.jTextFieldQty.setText("" + ib.getQuantity());
         this.jButtonUpdate.setEnabled(true);
         this.jButtonDelete.setEnabled(true);
         jButtoSave.setEnabled(false);
@@ -513,8 +534,14 @@ public class InventoryPage extends javax.swing.JFrame {
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
 
-        String productName = this.jTextFieldProductName.getText() + " (" + this.jTextFieldProductUom.getText() + " " + this.jComboBoxUnit.getSelectedItem() + ")";
-        double actualCost = 0.0, sellingCost = 0.0;
+String productName = "";
+        if(this.jTextFieldProductUom.getText().equals("")){
+         productName=this.jTextFieldProductName.getText();
+        }
+        else{
+        productName = this.jTextFieldProductName.getText() + " (" + this.jTextFieldProductUom.getText() + " " + this.jComboBoxUnit.getSelectedItem() + ")";
+ 
+        }        double actualCost = 0.0, sellingCost = 0.0;
         Integer qty = 0;
         boolean isActualCostNumeric = true, isSellingCostNumeric = true, isQtyCostNumeric = true;
 
@@ -529,7 +556,7 @@ public class InventoryPage extends javax.swing.JFrame {
             isSellingCostNumeric = false;
         }
         try {
-            qty = Integer.parseInt("" + this.jSpinnerQuantity.getValue());
+            qty = Integer.parseInt("" + this.jTextFieldQty.getText());
         } catch (Exception ex) {
             isQtyCostNumeric = false;
         }
@@ -597,7 +624,14 @@ public class InventoryPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonClear1ActionPerformed
 
     private void jButtoSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoSaveActionPerformed
-        String productName = this.jTextFieldProductName.getText() + " (" + this.jTextFieldProductUom.getText() + " " + this.jComboBoxUnit.getSelectedItem() + ")";
+        String productName = "";
+        if(this.jTextFieldProductUom.getText().equals("")){
+         productName=this.jTextFieldProductName.getText();
+        }
+        else{
+        productName = this.jTextFieldProductName.getText() + " (" + this.jTextFieldProductUom.getText() + " " + this.jComboBoxUnit.getSelectedItem() + ")";
+ 
+        }
         double actualCost = 0.0, sellingCost = 0.0;
         Integer qty = 0;
         boolean isActualCostNumeric = true, isSellingCostNumeric = true, isQtyCostNumeric = true;
@@ -613,12 +647,12 @@ public class InventoryPage extends javax.swing.JFrame {
             isSellingCostNumeric = false;
         }
         try {
-            qty = Integer.parseInt("" + this.jSpinnerQuantity.getValue());
+            qty = Integer.parseInt("" + this.jTextFieldQty.getText());
         } catch (Exception ex) {
             isQtyCostNumeric = false;
         }
 
-        if (this.jTextFieldActualCost.equals("") || this.jTextFieldSellingCost.equals("") || this.jTextFieldProductName.equals("") || this.jTextFieldProductUom.equals("")) {
+        if (this.jTextFieldActualCost.equals("") || this.jTextFieldSellingCost.equals("") || this.jTextFieldProductName.equals("")) {
             new playAudio().playErrorSound();
             JOptionPane.showMessageDialog(this, "Fill the fields");
         } else if (!isActualCostNumeric || !isSellingCostNumeric || !isQtyCostNumeric) {
@@ -678,6 +712,10 @@ public class InventoryPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonBack1ActionPerformed
 
+    private void jTextFieldSellingCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSellingCostActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSellingCostActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -734,11 +772,11 @@ public class InventoryPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSpinner jSpinnerQuantity;
     private javax.swing.JTable jTableInventory;
     private javax.swing.JTextField jTextFieldActualCost;
     private javax.swing.JTextField jTextFieldProductName;
     private javax.swing.JTextField jTextFieldProductUom;
+    private javax.swing.JTextField jTextFieldQty;
     private javax.swing.JTextField jTextFieldSellingCost;
     private javax.swing.JTextField jTextFieldSerach;
     private javax.swing.JTextField jTextFieldServiceName1;
@@ -749,13 +787,12 @@ public class InventoryPage extends javax.swing.JFrame {
         this.jTextFieldActualCost.setText("");
         this.jTextFieldProductName.setText("");
         this.jTextFieldSellingCost.setText("");
-        this.jSpinnerQuantity.setValue(1);
         this.jComboBoxUnit.setSelectedIndex(0);
-
+        jTextFieldQty.setText("");
     }
 
     public void showInUnitComboBox() {
-
+        this.jComboBoxUnit.addItem("");
         this.jComboBoxUnit.addItem("" + "ml");
         this.jComboBoxUnit.addItem("" + "g/L");
         this.jComboBoxUnit.addItem("" + "kg/L");

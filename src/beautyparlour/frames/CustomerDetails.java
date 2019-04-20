@@ -152,7 +152,7 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTableCustomerSaleDetail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTableCustomerSaleDetail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomerSaleDetail.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomerSaleDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -209,7 +209,6 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(jLabelCustomerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 570, 50));
 
         jButtonBack.setBackground(new java.awt.Color(20, 11, 6));
-        jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonBack.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBack.setText("Back");
         jButtonBack.setFocusPainted(false);
@@ -286,7 +285,7 @@ public class CustomerDetails extends javax.swing.JFrame {
         jLabel5.setText("Remaining Money");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 180, -1));
 
-        jTableCustomerSale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableCustomerSale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomerSale.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomerSale.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -337,7 +336,7 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 610, 210));
 
-        jTableCustomerProductSale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableCustomerProductSale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomerProductSale.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomerProductSale.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -391,7 +390,7 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 620, 210));
 
-        jTableCustomerProductSaleDetail1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTableCustomerProductSaleDetail1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomerProductSaleDetail1.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomerProductSaleDetail1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

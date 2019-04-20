@@ -293,7 +293,7 @@
             <property name="fontWeight">bold</property>
             <property name="textUnderline">underline</property>
             <property name="textAlign">center</property>
-            <text-property name="text">Recipt</text-property>
+            <text-property name="text">Receipt</text-property>
         </label>
         <label id="14">
             <property name="fontSize">9pt</property>

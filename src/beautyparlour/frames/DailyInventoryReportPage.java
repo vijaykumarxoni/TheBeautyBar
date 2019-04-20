@@ -134,7 +134,6 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        dateLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -148,6 +147,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextFieldSerach3 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        dateLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -162,11 +162,6 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 100, 30));
-
-        dateLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        dateLabel.setForeground(new java.awt.Color(255, 255, 255));
-        dateLabel.setText("Date:");
-        getContentPane().add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 186, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(20, 11, 6));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -183,19 +178,19 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Daily InventoryReport");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Pick a date:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, -1));
 
         jXDatePicker2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jXDatePicker2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jXDatePicker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
+        jPanel1.add(jXDatePicker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
 
         jButtonBack1.setBackground(new java.awt.Color(60, 34, 19));
         jButtonBack1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -210,7 +205,7 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 220, 40));
 
-        jTableDetails.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableDetails.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -237,9 +232,9 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
             jTableDetails.getColumnModel().getColumn(3).setMaxWidth(110);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 660, 420));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 660, 480));
 
-        jTableReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableReport.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -274,10 +269,10 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
             jTableReport.getColumnModel().getColumn(3).setMaxWidth(110);
         }
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 630, 420));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 630, 480));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
 
         jTextFieldSerach3.setBackground(new java.awt.Color(20, 11, 6));
         jTextFieldSerach3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -295,12 +290,17 @@ public class DailyInventoryReportPage extends javax.swing.JFrame {
                 jTextFieldSerach3KeyReleased(evt);
             }
         });
-        jPanel1.add(jTextFieldSerach3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 170, 230, 30));
+        jPanel1.add(jTextFieldSerach3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 110, 230, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Search");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 170, 70, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 110, 70, 30));
+
+        dateLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        dateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dateLabel.setText("Date:");
+        jPanel1.add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 670));
 

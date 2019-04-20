@@ -165,30 +165,10 @@ public class SalePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        discountField = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        nameField = new javax.swing.JTextField();
-        numberField = new javax.swing.JTextField();
-        addressfield = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel9 = new javax.swing.JLabel();
-        totalField = new javax.swing.JTextField();
-        generateButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        toRemoveField = new javax.swing.JLabel();
-        removeService = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        customerBalanceField = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         searchField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -196,40 +176,33 @@ public class SalePage extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         itemField = new javax.swing.JLabel();
         addField = new javax.swing.JButton();
+        removeService = new javax.swing.JButton();
+        toRemoveField = new javax.swing.JLabel();
+        generateButton = new javax.swing.JButton();
+        totalField = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        discountField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        addressfield = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        nameField = new javax.swing.JTextField();
+        customerBalanceField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        numberField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sale");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Discount Type");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(594, 512, -1, -1));
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amount", "Percentage" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 509, 133, -1));
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Discsount:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 553, -1, -1));
-
-        discountField.setBackground(new java.awt.Color(20, 11, 6));
-        discountField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        discountField.setForeground(new java.awt.Color(255, 255, 255));
-        discountField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        discountField.setCaretColor(new java.awt.Color(255, 255, 255));
-        discountField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                discountFieldKeyReleased(evt);
-            }
-        });
-        getContentPane().add(discountField, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 550, 135, -1));
-
         jButton5.setBackground(new java.awt.Color(60, 34, 19));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Back");
         jButton5.setFocusPainted(false);
@@ -240,58 +213,7 @@ public class SalePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 11, 100, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Customer:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 38, -1, -1));
-
-        nameField.setBackground(new java.awt.Color(20, 11, 6));
-        nameField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        nameField.setForeground(new java.awt.Color(255, 255, 255));
-        nameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        nameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 75, 325, -1));
-
-        numberField.setBackground(new java.awt.Color(20, 11, 6));
-        numberField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        numberField.setForeground(new java.awt.Color(255, 255, 255));
-        numberField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        numberField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numberFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(numberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 108, 325, -1));
-
-        addressfield.setBackground(new java.awt.Color(20, 11, 6));
-        addressfield.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        addressfield.setForeground(new java.awt.Color(255, 255, 255));
-        addressfield.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        addressfield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addressfieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(addressfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 142, 325, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Contact:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 111, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Address:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 145, -1, -1));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/sale.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 20, 198, 179));
-
-        jTable1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -314,68 +236,19 @@ public class SalePage extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(60);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(60);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(60);
+            jTable1.getColumnModel().getColumn(1).setMinWidth(60);
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(60);
+            jTable1.getColumnModel().getColumn(1).setMaxWidth(60);
+            jTable1.getColumnModel().getColumn(3).setMinWidth(120);
+            jTable1.getColumnModel().getColumn(3).setPreferredWidth(120);
+            jTable1.getColumnModel().getColumn(3).setMaxWidth(120);
+        }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 272, 570, 226));
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Total bill:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 594, -1, -1));
-
-        totalField.setEditable(false);
-        totalField.setBackground(new java.awt.Color(20, 11, 6));
-        totalField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        totalField.setForeground(new java.awt.Color(255, 255, 255));
-        totalField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        totalField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(totalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 591, 135, -1));
-
-        generateButton.setBackground(new java.awt.Color(60, 34, 19));
-        generateButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        generateButton.setForeground(new java.awt.Color(255, 255, 255));
-        generateButton.setText("Generate");
-        generateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generateButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(generateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 625, 219, -1));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Name:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 77, -1, -1));
-
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(60, 34, 19));
-        jButton1.setText("Get or Insert Customer");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(621, 38, -1, -1));
-
-        toRemoveField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        toRemoveField.setForeground(new java.awt.Color(255, 255, 255));
-        toRemoveField.setText("Service: ---------");
-        getContentPane().add(toRemoveField, new org.netbeans.lib.awtextra.AbsoluteConstraints(1115, 501, -1, -1));
-
-        removeService.setBackground(new java.awt.Color(60, 34, 19));
-        removeService.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        removeService.setForeground(new java.awt.Color(255, 255, 255));
-        removeService.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/delete.png"))); // NOI18N
-        removeService.setText("Remove");
-        removeService.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeServiceActionPerformed(evt);
-            }
-        });
-        getContentPane().add(removeService, new org.netbeans.lib.awtextra.AbsoluteConstraints(1097, 524, 130, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 272, 630, 340));
 
         jLabel11.setBackground(new java.awt.Color(60, 34, 19));
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -384,29 +257,15 @@ public class SalePage extends javax.swing.JFrame {
         jLabel11.setText("THE BEAUTY BAR");
         jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jLabel11.setOpaque(true);
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 1330, 20));
-
-        customerBalanceField.setBackground(new java.awt.Color(20, 11, 6));
-        customerBalanceField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        customerBalanceField.setForeground(new java.awt.Color(255, 255, 255));
-        customerBalanceField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        customerBalanceField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerBalanceFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(customerBalanceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 179, 325, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Customer Balance:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 800, 1650, 20));
 
         jPanel1.setBackground(new java.awt.Color(20, 11, 6));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         searchField.setBackground(new java.awt.Color(20, 11, 6));
         searchField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        searchField.setForeground(new java.awt.Color(255, 255, 255));
         searchField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         searchField.setCaretColor(new java.awt.Color(255, 255, 255));
         searchField.addActionListener(new java.awt.event.ActionListener() {
@@ -419,14 +278,14 @@ public class SalePage extends javax.swing.JFrame {
                 searchFieldKeyReleased(evt);
             }
         });
-        jPanel1.add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 520, -1));
+        jPanel1.add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 580, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Search");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 20));
 
-        jTable2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -450,12 +309,12 @@ public class SalePage extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 540, 226));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, 630, 320));
 
         itemField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         itemField.setForeground(new java.awt.Color(255, 255, 255));
         itemField.setText("Service: ------");
-        jPanel1.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 180, 100));
+        jPanel1.add(itemField, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 290, 320, 170));
 
         addField.setBackground(new java.awt.Color(60, 34, 19));
         addField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -466,9 +325,162 @@ public class SalePage extends javax.swing.JFrame {
                 addFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(addField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 112, -1));
+        jPanel1.add(addField, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, 112, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 680));
+        removeService.setBackground(new java.awt.Color(60, 34, 19));
+        removeService.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        removeService.setForeground(new java.awt.Color(255, 255, 255));
+        removeService.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/delete.png"))); // NOI18N
+        removeService.setText("Remove");
+        removeService.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeServiceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(removeService, new org.netbeans.lib.awtextra.AbsoluteConstraints(1490, 610, 130, -1));
+
+        toRemoveField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        toRemoveField.setForeground(new java.awt.Color(255, 255, 255));
+        toRemoveField.setText("Service: ---------");
+        jPanel1.add(toRemoveField, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 620, -1, -1));
+
+        generateButton.setBackground(new java.awt.Color(60, 34, 19));
+        generateButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        generateButton.setForeground(new java.awt.Color(255, 255, 255));
+        generateButton.setText("Generate");
+        generateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(generateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 740, 219, -1));
+
+        totalField.setEditable(false);
+        totalField.setBackground(new java.awt.Color(20, 11, 6));
+        totalField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        totalField.setForeground(new java.awt.Color(255, 255, 255));
+        totalField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        totalField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(totalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 710, 135, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Total bill:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 710, -1, -1));
+
+        discountField.setBackground(new java.awt.Color(20, 11, 6));
+        discountField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        discountField.setForeground(new java.awt.Color(255, 255, 255));
+        discountField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        discountField.setCaretColor(new java.awt.Color(255, 255, 255));
+        discountField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                discountFieldKeyReleased(evt);
+            }
+        });
+        jPanel1.add(discountField, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 670, 135, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Discsount:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 670, -1, -1));
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amount", "Percentage" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 630, 133, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Discount Type");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 630, -1, -1));
+
+        addressfield.setBackground(new java.awt.Color(20, 11, 6));
+        addressfield.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addressfield.setForeground(new java.awt.Color(255, 255, 255));
+        addressfield.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        addressfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addressfieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addressfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 325, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Address:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 170, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Name:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Contact:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
+
+        nameField.setBackground(new java.awt.Color(20, 11, 6));
+        nameField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        nameField.setForeground(new java.awt.Color(255, 255, 255));
+        nameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 325, -1));
+
+        customerBalanceField.setBackground(new java.awt.Color(20, 11, 6));
+        customerBalanceField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        customerBalanceField.setForeground(new java.awt.Color(255, 255, 255));
+        customerBalanceField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        customerBalanceField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerBalanceFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(customerBalanceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 190, 325, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Customer Balance:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, -1, -1));
+
+        numberField.setBackground(new java.awt.Color(20, 11, 6));
+        numberField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        numberField.setForeground(new java.awt.Color(255, 255, 255));
+        numberField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        numberField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(numberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 325, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/sale.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 30, 198, 179));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(60, 34, 19));
+        jButton1.setText("Get or Insert Customer");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(715, 60, 320, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Customer:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1640, 800));
 
         pack();
         setLocationRelativeTo(null);

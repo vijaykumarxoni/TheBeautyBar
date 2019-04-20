@@ -110,6 +110,7 @@ public class AllReportPage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(60, 34, 19));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -160,13 +161,13 @@ public class AllReportPage extends javax.swing.JFrame {
         jLabel6.setOpaque(true);
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 630, 750, 30));
 
-        jTableReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableReport.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "S#", "Customer_name", "Sale_date", "Total_bill"
+                "S#", "Customer Name", "Sale Date", "Total Bill"
             }
         ) {
             boolean[] canEdit = new boolean [] {

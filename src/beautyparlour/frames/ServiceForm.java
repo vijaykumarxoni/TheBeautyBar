@@ -14,11 +14,16 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.print.PrinterException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
@@ -98,6 +103,7 @@ public class ServiceForm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jButtonBack1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -107,7 +113,6 @@ public class ServiceForm extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonBack.setBackground(new java.awt.Color(60, 34, 19));
-        jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonBack.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBack.setText("Back");
         jButtonBack.setFocusPainted(false);
@@ -192,7 +197,7 @@ public class ServiceForm extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 220, 40));
 
-        jTableService.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableService.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableService.setForeground(new java.awt.Color(0, 0, 51));
         jTableService.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -218,9 +223,10 @@ public class ServiceForm extends javax.swing.JFrame {
             }
         });
         jTableService.setToolTipText("Products");
+        jTableService.setAutoscrolls(false);
         jTableService.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTableService.setGridColor(new java.awt.Color(0, 0, 51));
-        jTableService.setSelectionBackground(new java.awt.Color(60, 34, 19));
+        jTableService.setSelectionForeground(new java.awt.Color(0, 0, 0));
         jTableService.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jTableServiceMouseReleased(evt);
@@ -233,15 +239,21 @@ public class ServiceForm extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jTableService);
         if (jTableService.getColumnModel().getColumnCount() > 0) {
-            jTableService.getColumnModel().getColumn(0).setMinWidth(70);
-            jTableService.getColumnModel().getColumn(0).setPreferredWidth(70);
-            jTableService.getColumnModel().getColumn(0).setMaxWidth(70);
-            jTableService.getColumnModel().getColumn(1).setMinWidth(80);
-            jTableService.getColumnModel().getColumn(1).setPreferredWidth(80);
-            jTableService.getColumnModel().getColumn(1).setMaxWidth(80);
+            jTableService.getColumnModel().getColumn(0).setMinWidth(60);
+            jTableService.getColumnModel().getColumn(0).setPreferredWidth(60);
+            jTableService.getColumnModel().getColumn(0).setMaxWidth(60);
+            jTableService.getColumnModel().getColumn(1).setMinWidth(60);
+            jTableService.getColumnModel().getColumn(1).setPreferredWidth(60);
+            jTableService.getColumnModel().getColumn(1).setMaxWidth(60);
+            jTableService.getColumnModel().getColumn(3).setMinWidth(120);
+            jTableService.getColumnModel().getColumn(3).setPreferredWidth(120);
+            jTableService.getColumnModel().getColumn(3).setMaxWidth(120);
+            jTableService.getColumnModel().getColumn(4).setMinWidth(150);
+            jTableService.getColumnModel().getColumn(4).setPreferredWidth(150);
+            jTableService.getColumnModel().getColumn(4).setMaxWidth(150);
         }
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 940, 510));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 970, 510));
 
         jTextFieldSerach.setBackground(new java.awt.Color(20, 11, 6));
         jTextFieldSerach.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -273,14 +285,27 @@ public class ServiceForm extends javax.swing.JFrame {
         jLabel1.setText("THE BEAUTY BAR");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 1250, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 1270, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("SERVICE NAME*");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 170, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 610));
+        jButtonBack1.setBackground(new java.awt.Color(60, 34, 19));
+        jButtonBack1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButtonBack1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/print_1.png"))); // NOI18N
+        jButtonBack1.setText("Print Report");
+        jButtonBack1.setFocusPainted(false);
+        jButtonBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBack1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 220, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 610));
 
         pack();
         setLocationRelativeTo(null);
@@ -468,6 +493,16 @@ public class ServiceForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonBackActionPerformed
 
+    private void jButtonBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBack1ActionPerformed
+        MessageFormat header = new MessageFormat("THE BEAUTY BAR Services REPORT");
+        MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+        try {
+            this.jTableService.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+        } catch (PrinterException ex) {
+            Logger.getLogger(InventoryPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButtonBack1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -507,6 +542,7 @@ public class ServiceForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtoSave;
     private javax.swing.JButton jButtonBack;
+    private javax.swing.JButton jButtonBack1;
     private javax.swing.JButton jButtonClear1;
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonUpdate;

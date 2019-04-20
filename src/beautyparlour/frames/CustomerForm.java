@@ -139,7 +139,6 @@ public class CustomerForm extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonBack.setBackground(new java.awt.Color(60, 34, 19));
-        jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonBack.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBack.setText("Back");
         jButtonBack.setFocusPainted(false);
@@ -166,7 +165,7 @@ public class CustomerForm extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("CONTACT *");
+        jLabel5.setText("CONTACT ");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 206, -1));
 
         jTextFieldCustomerContact.setBackground(new java.awt.Color(20, 11, 6));
@@ -224,7 +223,7 @@ public class CustomerForm extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 220, 40));
 
-        jTableCustomer.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableCustomer.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomer.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

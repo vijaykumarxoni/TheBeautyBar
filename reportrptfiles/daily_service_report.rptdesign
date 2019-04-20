@@ -145,13 +145,6 @@ WHERE sd.`sale_date`= ? GROUP BY ser.`service_id`]]></xml-property>
         </simple-master-page>
     </page-setup>
     <body>
-        <image id="7">
-            <property name="marginLeft">70pt</property>
-            <property name="height">1.9479166666666667in</property>
-            <property name="width">5.614583333333333in</property>
-            <property name="source">embed</property>
-            <property name="imageName">signature_logodone.png</property>
-        </image>
         <label id="8">
             <property name="fontSize">18pt</property>
             <property name="textAlign">center</property>

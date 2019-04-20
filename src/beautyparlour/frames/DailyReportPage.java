@@ -12,6 +12,7 @@ import beautyparlour.daoImpl.CustomerDaoImpl;
 import beautyparlour.daoImpl.ReportDaoImpl;
 import java.awt.Color;
 import java.awt.Font;
+import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -19,6 +20,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableRowSorter;
@@ -99,29 +103,30 @@ public class DailyReportPage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableReport = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         dateLabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         totatCustomerlabel = new javax.swing.JLabel();
         totatProfitlabel = new javax.swing.JLabel();
-        jXDatePicker2 = new org.jdesktop.swingx.JXDatePicker();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jXDatePicker2 = new org.jdesktop.swingx.JXDatePicker();
+        jButtonBack1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTableReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableReport.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "S#", "Customer_name", "Sale_date", "Total_bill"
+                "S#", "Custome Name", "Sale Date", "Total Bill"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -133,6 +138,14 @@ public class DailyReportPage extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTableReport);
+        if (jTableReport.getColumnModel().getColumnCount() > 0) {
+            jTableReport.getColumnModel().getColumn(0).setMinWidth(80);
+            jTableReport.getColumnModel().getColumn(0).setPreferredWidth(80);
+            jTableReport.getColumnModel().getColumn(0).setMaxWidth(80);
+            jTableReport.getColumnModel().getColumn(3).setMinWidth(150);
+            jTableReport.getColumnModel().getColumn(3).setPreferredWidth(150);
+            jTableReport.getColumnModel().getColumn(3).setMaxWidth(150);
+        }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 209, 719, 329));
 
@@ -145,19 +158,6 @@ public class DailyReportPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 100, 30));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Daily Report");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 39, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 11, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Pick a date:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 128, -1, -1));
 
         dateLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,13 +184,6 @@ public class DailyReportPage extends javax.swing.JFrame {
         totatProfitlabel.setText("0");
         getContentPane().add(totatProfitlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 596, -1, -1));
 
-        jXDatePicker2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jXDatePicker2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jXDatePicker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 125, -1, -1));
-
         jPanel1.setBackground(new java.awt.Color(20, 11, 6));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -202,6 +195,39 @@ public class DailyReportPage extends javax.swing.JFrame {
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jLabel6.setOpaque(true);
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 640, 750, 30));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Daily Report");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Pick a date:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, 20));
+
+        jXDatePicker2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jXDatePicker2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jXDatePicker2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
+
+        jButtonBack1.setBackground(new java.awt.Color(60, 34, 19));
+        jButtonBack1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButtonBack1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/print_1.png"))); // NOI18N
+        jButtonBack1.setText("Print Report");
+        jButtonBack1.setFocusPainted(false);
+        jButtonBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBack1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 220, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 670));
 
@@ -228,7 +254,7 @@ public class DailyReportPage extends javax.swing.JFrame {
         LocalDate date = LocalDate.now();
 
         if (date2.equals(date + "")) {
-            dateLabel.setText("Today's Report");
+            dateLabel.setText(date2);
         } else {
             dateLabel.setText("Report of Date: " + date2);
 
@@ -236,6 +262,16 @@ public class DailyReportPage extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jXDatePicker2ActionPerformed
+
+    private void jButtonBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBack1ActionPerformed
+        MessageFormat header = new MessageFormat("THE BEAUTY BAR REPORT  ");
+        MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+        try {
+            this.jTableReport.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+        } catch (Exception ex) {
+            Logger.getLogger(InventoryPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButtonBack1ActionPerformed
 
     public void genReport(String date) {
 
@@ -331,6 +367,7 @@ public class DailyReportPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dateLabel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonBack1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

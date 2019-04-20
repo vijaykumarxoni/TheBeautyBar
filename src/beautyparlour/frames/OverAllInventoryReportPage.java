@@ -174,7 +174,7 @@ public class OverAllInventoryReportPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Overall InventoryReport");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
 
         jButtonBack1.setBackground(new java.awt.Color(60, 34, 19));
         jButtonBack1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -189,7 +189,7 @@ public class OverAllInventoryReportPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 10, 220, 40));
 
-        jTableDetails.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableDetails.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -218,7 +218,7 @@ public class OverAllInventoryReportPage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 660, 460));
 
-        jTableReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTableReport.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -256,7 +256,7 @@ public class OverAllInventoryReportPage extends javax.swing.JFrame {
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 630, 460));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/report.PNG"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));

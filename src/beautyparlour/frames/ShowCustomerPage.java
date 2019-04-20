@@ -126,7 +126,7 @@ public class ShowCustomerPage extends javax.swing.JFrame {
         jLabel4.setText("Our Customers Record");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 410, 30));
 
-        jTableCustomer.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTableCustomer.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableCustomer.setForeground(new java.awt.Color(0, 0, 51));
         jTableCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -211,7 +211,6 @@ public class ShowCustomerPage extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 930, 30));
 
         jButtonBack.setBackground(new java.awt.Color(20, 11, 6));
-        jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonBack.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBack.setText("Back");
         jButtonBack.setFocusPainted(false);

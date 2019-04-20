@@ -5,6 +5,7 @@
  */
 package beautyparlour.frames;
 
+import beautyparlour.dialog.AdminLoginDialog;
 import beautyparlour.dialog.PrintersAvailable;
 import java.awt.Toolkit;
 import java.awt.Window;
@@ -28,10 +29,12 @@ public class HomePage extends javax.swing.JFrame {
         
 
   
-//        
-//        Toolkit toolkit=Toolkit.getDefaultToolkit();
-//        int xsize=(int)toolkit.getScreenSize().getWidth();
-//        int ysize=(int)toolkit.getScreenSize().getHeight();
+        
+        Toolkit toolkit=Toolkit.getDefaultToolkit();
+        int xsize=(int)toolkit.getScreenSize().getWidth();
+        int ysize=(int)toolkit.getScreenSize().getHeight();
+        
+        System.out.println("x:"+xsize+" ysize:"+ysize);
 //        this.pack();
 //                this.setSize(xsize,ysize);
 
@@ -60,10 +63,9 @@ public class HomePage extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButtonInventory = new javax.swing.JButton();
         jButtonRetail = new javax.swing.JButton();
+        jButtonLogin12 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -78,7 +80,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(102, 204, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/beautybarlogo.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 400, 350));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 400, 420));
 
         jButtonLogin6.setBackground(new java.awt.Color(60, 34, 19));
         jButtonLogin6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -91,7 +93,7 @@ public class HomePage extends javax.swing.JFrame {
                 jButtonLogin6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonLogin6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 310, 140));
+        jPanel1.add(jButtonLogin6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 540, 400, 200));
 
         jButtonProduct.setBackground(new java.awt.Color(60, 34, 19));
         jButtonProduct.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -104,7 +106,7 @@ public class HomePage extends javax.swing.JFrame {
                 jButtonProductActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 310, 140));
+        jPanel1.add(jButtonProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 540, 400, 200));
 
         jButtonLogin9.setBackground(new java.awt.Color(60, 34, 19));
         jButtonLogin9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -116,30 +118,29 @@ public class HomePage extends javax.swing.JFrame {
                 jButtonLogin9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonLogin9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 310, 140));
+        jPanel1.add(jButtonLogin9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 760, 400, 200));
 
         jButtonLogin10.setBackground(new java.awt.Color(60, 34, 19));
         jButtonLogin10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonLogin10.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonLogin10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/customer_records.png"))); // NOI18N
         jButtonLogin10.setText("Customer Records");
         jButtonLogin10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonLogin10ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonLogin10, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 310, 140));
+        jPanel1.add(jButtonLogin10, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 760, 400, 200));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Software Designed By: Zaptox");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 680, 280, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1010, 280, 20));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, 130));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("contactus@zaptox.com");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, 230, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1030, 230, 20));
 
         jLabel1.setBackground(new java.awt.Color(60, 34, 19));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -148,20 +149,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel1.setText("THE BEAUTY BAR ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(60, 34, 19), 2, true));
         jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 1360, 50));
-
-        jButtonInventory.setBackground(new java.awt.Color(60, 34, 19));
-        jButtonInventory.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonInventory.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/purchase-guy.png"))); // NOI18N
-        jButtonInventory.setText("Inventory");
-        jButtonInventory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonInventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInventoryActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 360, 310, 140));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1010, 1920, 50));
 
         jButtonRetail.setBackground(new java.awt.Color(60, 34, 19));
         jButtonRetail.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -173,23 +161,30 @@ public class HomePage extends javax.swing.JFrame {
                 jButtonRetailActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonRetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, 310, 140));
+        jPanel1.add(jButtonRetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 540, 400, 200));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/Report_Image.png"))); // NOI18N
+        jButtonLogin12.setBackground(new java.awt.Color(60, 34, 19));
+        jButtonLogin12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonLogin12.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonLogin12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/customer_records.png"))); // NOI18N
+        jButtonLogin12.setText("Daily Expenses");
+        jButtonLogin12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogin12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonLogin12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 760, 400, 200));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/beautyparlour/util/login.png"))); // NOI18N
         jLabel6.setText("jLabel6");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 560, 100, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1780, 60, 100, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Reports");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 660, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1360, 740));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1920, 1060));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -223,16 +218,19 @@ public class HomePage extends javax.swing.JFrame {
         new SalePage().setVisible(true);
     }//GEN-LAST:event_jButtonLogin6ActionPerformed
 
-    private void jButtonInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInventoryActionPerformed
-        // TODO add your handling code here:
-        new InventoryPage().setVisible(true);
-    }//GEN-LAST:event_jButtonInventoryActionPerformed
-
     private void jButtonRetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetailActionPerformed
         new RetailPage().setVisible(true);    }//GEN-LAST:event_jButtonRetailActionPerformed
 
+    private void jButtonLogin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin12ActionPerformed
+        // TODO add your handling code here:
+        new DailyExpensesPage().setVisible(true);
+    }//GEN-LAST:event_jButtonLogin12ActionPerformed
+
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        new ReportPage().setVisible(true);    }//GEN-LAST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+                new AdminLoginDialog(this,true).setVisible(true);
+
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -313,8 +311,8 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonInventory;
     private javax.swing.JButton jButtonLogin10;
+    private javax.swing.JButton jButtonLogin12;
     private javax.swing.JButton jButtonLogin6;
     private javax.swing.JButton jButtonLogin9;
     private javax.swing.JButton jButtonProduct;
@@ -325,7 +323,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
